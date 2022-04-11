@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register&&login</title>
+    <link rel="stylesheet" type="text/css" href="pageChange.css" />
+    <script src="pageChage.js"></script>
+</head>
+<body>
+    <div class="control">
+        <div class="item">
+            <form action="home.html" onsubmit="return ValidName()">
+            <div class="active">login</div><div>register</div>
+        </div>
+        <div class="content">
+            <div style="display: block;">
+                <p>UserName</p>
+                <input id="username" type="text" placeholder="username" />
+                
+                <p>password</p>
+                <input id="pasw" class="psw" type="password" placeholder="password" />
+                <p id ="wrong"></p>
+                <br/>
+                <input type="submit" value="submit" />
+                </form>
+                
+            </div>
+            <form action="home.html" onsubmit="return ValidName()">
+                 <div>
+                <p>UserName</p>
+                <input type="text" placeholder="username" />
+                <p>PassWord</p>
+                <input class="RPsw" type="password" placeholder="password" />
+                <p>Email</p>
+                <input type="email" placeholder="email" />
+                <p id ="error"></p>
+                <br/>
+                <input  type="submit" value="submit" />
+            </div>
+        </form>
+           
+        </div>
+        
+    </div>
+</body>
+<script>
+      function ValidName(){
+        var pasw = document.querySelector("#pasw")
+       if(username.value== null || username.value=="" || username.value.length<6){
+           alert("enter correct name or name must more than 5 characters");
+           return false;
+       }
+       else if(pasw.value.length < 6 || pasw.value.length > 16){
+        
+        alert("please enter 6-16 lenth for password");
+        return false;
+       }
+ 
+       
+
+   }
+</script>
+</html>
